@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 interface FormData {
   name: string;
@@ -12,7 +12,8 @@ interface FormData {
   styleUrls: ['./first.component.scss']
 })
 export class FirstComponent {
-  public oNstart(data: FormData) {
-    console.log(data);
+  @Output() public onStart = new EventEmitter<string>();
+  public onSubmit(data: FormData) {
+    this.onStart.emit(data.name);
 }
 }

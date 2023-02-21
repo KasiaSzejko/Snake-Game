@@ -1,35 +1,7 @@
-<header class="center">SNAKE</header>
-<p> Hi! Please, complete your name and e-mail address and let's get started with Snake Game!</p>
+<div *ngIf = '!readyToPlay'>
+    <app-first (onStart) = 'onNamePassed($event)'></app-first>
+</div>
 
-<form #mailingForm="ngForm"
-    (start)="oNstart(mailingForm.form.value)">
-
-
-Name
-<input name="name"
-    #nameModel="ngModel"
-    required 
-    ngModel>
-
-<p *ngIf="nameModel.touched && nameModel.invalid">
-        Please, enter your name!
-</p>
-
-<br/>
-
-E-mail
-<input name="email"
-    #emailModel="ngModel"
-    required
-    pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-    ngModel/>
-
-<p *ngIf="emailModel.touched && emailModel.invalid">
-    Wrong e-mail address!
-</p>
-
-<br/>
-<button [disabled] ="mailingForm.valid === false">
-     Start
-     </button>
-</form>
+<div *ngIf = 'readyToPlay'>
+    <app-second></app-second>
+</div>

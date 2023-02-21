@@ -2,7 +2,7 @@
 <p> Hi! Please, complete your name and e-mail address and let's get started with Snake Game!</p>
 
 <form #mailingForm="ngForm"
-    (start)="oNstart(mailingForm.form.value)">
+    (submit)="onSubmit(mailingForm.form.value)">
 
 
 Name
