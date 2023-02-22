@@ -3,5 +3,8 @@
 </div>
 
 <div *ngIf = 'readyToPlay'>
-    <app-second></app-second>
+    <app-second
+    [userName]='activeUser'
+    (onExit)="onFinishedGame($event)">
+</app-second>
 </div>

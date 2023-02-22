@@ -1,3 +1,5 @@
+<h1> Hello {{ userName }}! </h1>
+
 <ngx-snake #game></ngx-snake>
 
 
@@ -8,3 +10,5 @@
 <button (click)="game.actionLeft()">Left</button>
 <button (click)="game.actionRight()">Right</button>
 <button (click)="game.actionDown()">Down</button>
+
+<button (click)="onExitClick()">Exit</button>

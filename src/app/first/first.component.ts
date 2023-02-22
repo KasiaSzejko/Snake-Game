@@ -14,6 +14,7 @@ interface FormData {
 export class FirstComponent {
   @Output() public onStart = new EventEmitter<string>();
   public onSubmit(data: FormData) {
-    this.onStart.emit(data.name);
+    this.onStart.emit(data.name)
+    console.log(data);
 }
 }
