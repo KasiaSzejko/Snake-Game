@@ -11,6 +11,7 @@ export class SecondComponent {
   ngOnInit() {
     this.userName = this.data;
   }
+ 
 
   @Output() public onExit = new EventEmitter<boolean>();
 

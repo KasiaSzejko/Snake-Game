@@ -1,5 +1,5 @@
 <header class="center">SNAKE</header>
-<p> Hi! Please, complete your name and e-mail address and let's get started with Snake Game!</p>
+<h3> Hi! Please, complete your name and e-mail address and let's get started with Snake Game!</h3>
 
 <form #mailingForm="ngForm"
     (submit)="onSubmit(mailingForm.form.value)">
@@ -34,3 +34,7 @@ E-mail
      </button>
 </form>
 
+<br/>
+<div>
+    <img [src] = "imageUrl">
+</div>

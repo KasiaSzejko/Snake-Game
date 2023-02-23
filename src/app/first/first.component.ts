@@ -17,4 +17,5 @@ export class FirstComponent {
     this.onStart.emit(data.name)
     console.log(data);
 }
+public imageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Q6WoDe782nwbRdsFYHQ24TsJD9xFmCPhOg&usqp=CAU';
 }
