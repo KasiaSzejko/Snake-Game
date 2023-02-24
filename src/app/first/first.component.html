@@ -1,40 +1,43 @@
 <header class="center">SNAKE</header>
-<h3> Hi! Please, complete your name and e-mail address and let's get started with Snake Game!</h3>
+<h3 class="text">Hi! Please, complete your name and e-mail address and let's get started with Snake Game!</h3>
 
 <form #mailingForm="ngForm"
     (submit)="onSubmit(mailingForm.form.value)">
 
 
-Name
-<input name="name"
+<p class="text">Name</p>
+<input class="text"
+    name="name"
     #nameModel="ngModel"
     required 
     ngModel>
 
-<p *ngIf="nameModel.touched && nameModel.invalid">
+<p *ngIf="nameModel.touched && nameModel.invalid" class="text">
         Please, enter your name!
 </p>
 
 <br/>
+<br/>
 
-E-mail
-<input name="email"
+<p class="text">E-mail</p>
+<input class="text"
+    name="email"
     #emailModel="ngModel"
     required
     pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
     ngModel/>
 
-<p *ngIf="emailModel.touched && emailModel.invalid">
+<p *ngIf="emailModel.touched && emailModel.invalid" class="text">
     Wrong e-mail address!
 </p>
 
 <br/>
-<button [disabled] ="mailingForm.valid === false">
+<button class="text" [disabled] ="mailingForm.valid === false">
      Start
      </button>
 </form>
 
 <br/>
 <div>
-    <img [src] = "imageUrl">
+    <img class="text" [src] = "imageUrl">
 </div>
