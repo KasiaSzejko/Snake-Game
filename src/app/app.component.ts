@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'snake';
     public readyToPlay = false;
     public activeUser = '';
-    public presentingGame = true;
+    
   
 
 public onNamePassed (userName: string) {
@@ -26,8 +26,6 @@ public onFinishedGame(finishedGame: boolean) {
     this.readyToPlay = false;
   }
 }
-
-
 
 }
 

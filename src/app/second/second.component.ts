@@ -7,11 +7,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class SecondComponent {
   @Input() public userName: string = '';
-  data: string = '';
-  ngOnInit() {
-    this.userName = this.data;
-  }
- 
   @Output() public onExit = new EventEmitter<boolean>();
 
   public onExitClick() {
